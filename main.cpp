@@ -1,11 +1,11 @@
 #include <QCoreApplication>
-#include "wrapfcntl.h"
+#include "run_single_instance.h"
 
 int main(int argc, char *argv[])
 {
 
     if(runSingleInstance() == false){
-        return -1;
+        exit(1);
     }
     QCoreApplication a(argc, argv);
 
